@@ -8,6 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 To run this web application locally, first clone this project then run the command "npm install" in project directory and then run the command "npm run dev".
+
+You can find Lighthouse report of this preoject within public folder.
 This is a video player app. It has majorly two components 1.Playlist.jsx and 2.VideoPlayer.jsx 
 
 This app has functionalities like :

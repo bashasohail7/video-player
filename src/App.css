@@ -1,0 +1,126 @@
+body {
+  background-color: #f1f1f1;
+}
+.app {
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+.video-player-container {
+  width: 75%;
+}
+.video-player {
+  margin-right: 20px;
+}
+.fullscreen-img {
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+.video-description {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+  color: #1f1f1f;
+}
+.playlist-container {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 24%;
+}
+.controls {
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+.controls-leftside {
+  flex-grow: 1;
+  gap: 1px;
+  /* width: 80%; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; Align items to the left */
+}
+.controls-rightside{
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  gap:2px
+}
+.speed {
+  padding: 5px;
+  border-radius: 4px;
+}
+img{
+  cursor: pointer;
+}
+.play-icon {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  cursor: pointer;
+}
+.fullscreen-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  cursor: pointer;
+}
+.time {
+  margin-left: 2px;
+  white-space: nowrap; /* Prevent time text from wrapping */
+}
+.playlist-item {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin-bottom: 2px;
+  /* bac */
+}
+.playlist-item img {
+  cursor: pointer;
+}
+.playlist-item:hover {
+  background-color: #e9e9e9ef;
+  /* background-color: #f0f0f0; */
+}
+.seek-bar {
+  flex-grow: 1;
+}
+.playlist {
+  height: 90vh;
+  padding: 10px;
+  overflow-y: scroll;
+}
+.playlist-title{
+  align-self: end;
+   margin-left: 5px ;
+   /* border-bottom: 1px solid grey; */
+}
+.active-video {
+  background-color: #f1f1f1;
+}
+@media (max-width: 992px) {
+  .app {
+    padding: 5px 10px; /* Adjust padding as needed */
+    flex-direction: column !important;
+    align-items: center; /* Adjust alignment for smaller screens */
+  }
+  .video-player-container {
+    width: 100%;
+  }
+  .playlist-container {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  .playlist {
+    height: 500px;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+}

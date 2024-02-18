@@ -46,17 +46,18 @@ body {
   align-items: center;
   /* justify-content: space-between; Align items to the left */
 }
-.controls-rightside{
+.controls-rightside {
+  width: fit-content;
   /* background-color: red; */
   display: flex;
   align-items: center;
-  gap:2px
+  gap: 2px;
 }
 .speed {
-  padding: 5px;
-  border-radius: 4px;
+  padding: 2px;
+  border-radius: 2px;
 }
-img{
+img {
   cursor: pointer;
 }
 .play-icon {
@@ -96,10 +97,10 @@ img{
   padding: 10px;
   overflow-y: scroll;
 }
-.playlist-title{
+.playlist-title {
   align-self: end;
-   margin-left: 5px ;
-   /* border-bottom: 1px solid grey; */
+  margin-left: 5px;
+  /* border-bottom: 1px solid grey; */
 }
 .active-video {
   background-color: #f1f1f1;
@@ -122,5 +123,31 @@ img{
     height: 500px;
     padding: 10px;
     overflow-y: scroll;
+  }
+}
+@media (max-width: 455px) {
+  .controls {
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+    gap: 20px;
+    /* justify-content: space-between; */
+    /* background-color: red; */
+  }
+  .controls-leftside {
+    width: 100%;
+  }
+  .controls-rightside {
+    margin-top: -20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .play-icon {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    cursor: pointer;
   }
 }

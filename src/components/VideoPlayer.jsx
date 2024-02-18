@@ -156,7 +156,7 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
       <div style={{ position: 'relative' }}>
 
         <video
-          style={{ width: '100%', height: `calc(100% / ${aspectRatio})` }}
+          style={{ width: '100%', height: `calc(100% / ${aspectRatio})`,cursor:'pointer' }}
           onClick={togglePlay}
           ref={videoRef}
           src={videoSrc.sources}

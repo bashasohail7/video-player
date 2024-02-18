@@ -125,7 +125,7 @@ function Playlist({ handleClick, selectedVideoTitle }) {
 
   return (
     <div className="playlist" >
-      <h2>Playlist</h2>
+      <h2 className='playlist-heading'>Playlist</h2>
       <hr />
       {/* <input
         type="text"
@@ -140,7 +140,7 @@ function Playlist({ handleClick, selectedVideoTitle }) {
             <div className={`playlist-item ${selectedVideoTitle == info.title ? 'active-video' : ''}`}
               key={info.title} onClick={() => onSelect(info)}>
               <img src={info.thumb} height={100} width={120} alt={info.title} />
-              <h4 className='playlist-title' style={{ alignSelf: 'end', marginLeft: '5px' }}>
+              <h4 className='playlist-title' >
                 {info.title}
               </h4>
             </div>

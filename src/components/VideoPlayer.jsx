@@ -18,7 +18,6 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
   const seekBarRef = useRef(null);
 
   const togglePlay = () => {
-    console.log('toggle...');
     setIsPlaying(!isPlaying);
     if (isPlaying) {
       videoRef.current.pause();
@@ -35,7 +34,6 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
         case 32: //space bar
           {
             event.preventDefault();
-            console.log('prevent')
             togglePlay();
           }
           break;
@@ -88,6 +86,7 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
     }
   }
   const savePlaybackPosition = () => {
+    // console.log('setting time',videoRef.current.currentTime)
     localStorage.setItem(videoSrc.title, videoRef.current.currentTime); // Save playback position
   };
 
@@ -97,6 +96,7 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
     if (storedTime !== null) {
       setCurrentTime(storedTime);
       videoRef.current.currentTime = storedTime
+      // console.log('getting time',storedTime)
     }
     setIsPlaying(false)
     setPlaybackSpeed(1)

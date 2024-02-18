@@ -110,7 +110,6 @@ export const videos = [
   }
 ];
 function Playlist({ handleClick, selectedVideoTitle }) {
-  console.log('selecyedvideo ===>', selectedVideoTitle)
   const [filteredVideos, setFilteredVideos] = useState(videos)
   const onChange = (e) => {
     const filtered = videos.filter(video =>

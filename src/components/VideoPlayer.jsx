@@ -156,7 +156,7 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
       <div style={{ position: 'relative' }}>
 
         <video
-          style={{ width: '100%', height: `calc(100% / ${aspectRatio})`,cursor:'pointer' }}
+          style={{ width: '100%', height: `calc(100% / ${aspectRatio})`, cursor: 'pointer' }}
           onClick={togglePlay}
           ref={videoRef}
           src={videoSrc.sources}
@@ -218,6 +218,9 @@ function VideoPlayer({ videoSrc, isVideoSelected }) {
           </select>
         </section>
       </div>
+      <h4 className='playlist-title' >
+        {videoSrc.title}
+      </h4>
       <p className='video-description'>{videoSrc.description}</p>
     </>
   );
